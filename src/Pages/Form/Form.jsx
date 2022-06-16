@@ -107,14 +107,14 @@ export const Form = ({ onSubmit }) => {
       project: '',
     });
     setValidStatus({
-      name: 'notEntered',
-      lastName: 'notEntered',
-      birthDate: 'notEntered',
-      phone: 'notEntered',
-      website: 'notEntered',
-      about: 'notEntered',
-      tech: 'notEntered',
-      project: 'notEntered',
+      name: NOT_ENTERED,
+      lastName: NOT_ENTERED,
+      birthDate: NOT_ENTERED,
+      phone: NOT_ENTERED,
+      website: NOT_ENTERED,
+      about: NOT_ENTERED,
+      tech: NOT_ENTERED,
+      project: NOT_ENTERED,
     });
   };
 
