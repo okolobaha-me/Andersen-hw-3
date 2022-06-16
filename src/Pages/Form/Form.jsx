@@ -2,7 +2,7 @@ import { useState } from 'react';
 import s from './Form.module.css';
 import * as formValidation from '../../utils/formValidation';
 import { TextArea } from './TextArea/TextArea';
-import { Title } from '../Title/Title';
+import { Title } from '../../components/Title/Title';
 import PropTypes from 'prop-types';
 import { VALIDATION_MESSAGES } from '../../utils/formValidation';
 import { Input } from './Input/Input';
