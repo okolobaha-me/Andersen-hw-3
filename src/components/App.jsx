@@ -1,29 +1,24 @@
 import { Form } from './Form/Form';
 import s from './App.module.css';
-import { Component } from 'react';
+import { useState } from 'react';
 import { Profile } from './Profile/Profile';
 
-export class App extends Component {
-  state = {
-    isFormFilled: false,
-    formData: {},
+export const App = () => {
+  const [isFormFilled, setIsFormFilled] = useState(false);
+  const [formData, setFormData] = useState({});
+
+  const handleSubmitFirm = data => {
+    setIsFormFilled(true);
+    setFormData(data);
   };
 
-  handleSubmitFirm = data => {
-    this.setState({ isFormFilled: true, formData: data });
-  };
-
-  render() {
-    const { isFormFilled } = this.state;
-
-    return (
-      <div className={s.container}>
-        {isFormFilled ? (
-          <Profile data={this.state.formData} />
-        ) : (
-          <Form onSubmit={this.handleSubmitFirm} />
-        )}
-      </div>
-    );
-  }
-}
+  return (
+    <div className={s.container}>
+      {isFormFilled ? (
+        <Profile data={formData} />
+      ) : (
+        <Form onSubmit={handleSubmitFirm} />
+      )}
+    </div>
+  );
+};
